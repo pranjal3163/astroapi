@@ -1,0 +1,172 @@
+{% include "header.html" %}
+<div class="row">
+    <div class="column side">
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+            <div class="w3-container">
+                <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                    <i class="fa fa-remove"></i></a>
+                <img src="{{ url_for('static',filename='images/me.png') }}" style="width:45%;" class="w3-round"><br><br>
+                <h4><b>PORTFOLIO</b></h4>
+            </div>
+            <div class="w3-bar-block">
+                <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+            </div>
+            <div class="w3-panel w3-large">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+        </nav>
+    </div>
+    <div class="column middle">
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:300px">
+            <h4 id="portfolio"><b>Portfolio</b></h4>
+            <!-- Carosol gallery-->
+            <div id="coverflow">
+                <ul class="flip-items">
+                    <li data-flip-title="Red">
+                        <img src="{{ url_for('static',filename='images/text1.gif') }}">
+                    </li>
+                    <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+                        <img src="{{ url_for('static',filename='images/text2.gif') }}">
+                    </li>
+                    <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+                        <img src="{{ url_for('static',filename='images/text3.gif') }}">
+                    </li>
+                    <li data-flip-title="Daisy Bush" data-flip-category="Purples">
+                        <img src="{{ url_for('static',filename='images/text4.gif') }}">
+                    </li>
+                    <li data-flip-title="Cerulean Blue" data-flip-category="Blues">
+                        <img src="{{ url_for('static',filename='images/text5.gif') }}">
+                    </li>
+                </ul>
+            </div>
+            <script>
+                var coverflow = $("#coverflow").flipster();
+            </script>
+            <div class="w3-container w3-padding-large" style="margin-bottom:32px" >
+                <h4 id="about"><b>About Me</b></h4>
+                <p>Overall 14+ years of experience in the software development. Proven expertise in building and customizing software for various industry. Knowledge in most widely used computer programs databases, safety and security technologies. Experience and fluency with a variety of production methodologies such as waterfall, agile, extreme, SCRUM and the ability to direct workflow according to the situations that are presented.</p>
+                <hr>
+                <h4>Technical Skills</h4>
+                <!-- Progress bars / Skills -->
+                <p>Objective C</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+                </div>
+                <p>Swift</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+                </div>
+                <p>Python</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+                </div>
+                <p>Java</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
+                </div>
+                <p>Angular JS</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+                </div>
+                <p>React JS</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+                </div>
+                <p>Android</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+                </div>
+                <p>PHP</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+                </div>
+                <p>
+                    <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+                        <a href="https://drive.google.com/file/d/1kxszRuyjEIgpg7VR7U7FfEs6eArKyWYr/view?usp=sharing">
+                            <i class="fa fa-download w3-margin-right"></i>Download Resume
+                        </a>
+                    </button>
+                </p>
+                <hr>
+                <!-- Contact Section -->
+                <div class="w3-container w3-padding-large w3-grey">
+                    <h4 id="contact"><b>Contact Me</b></h4>
+                    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                        <div class="w3-third w3-dark-grey">
+                            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                            <p>pranjal3163@gmail.com</p>
+                        </div>
+                        <div class="w3-third w3-teal">
+                            <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                            <p>Bangalore, IN</p>
+                        </div>
+                        <div class="w3-third w3-dark-grey">
+                            <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                            <p>+91-9986413267</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w3-opacity">
+                <form action="{{ url_for('show_contact')}}" method="post" target="_blank">
+                    <div class="w3-section">
+                        <label>Name</label>
+                        <input class="w3-input w3-border" type="text" name="Name" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Email</label>
+                        <input class="w3-input w3-border" type="text" name="Email" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Message</label>
+                        <input class="w3-input w3-border" type="text" name="Message" required>
+                    </div>
+                    <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-padding-32 w3-dark-grey">
+
+            </footer>
+
+            <div class="w3-black w3-center w3-padding-24"></div>
+
+            <!-- End page content -->
+
+
+
+        </div>
+
+
+    </div>
+    <div class="column side">
+    </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
+
+{% include "footer.html" %}
+

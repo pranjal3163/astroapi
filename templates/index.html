@@ -1,0 +1,62 @@
+{% include "header.html" %}
+<!-- Main Content-->
+<div class="row">
+    <!-- left Content-->
+    <div class="column side">
+    </div>
+    <!-- End left content-->
+    <!-- Middle Content-->
+    <div class="column middle">
+        <div class="sunshine-instruction"><h1>Choose a zodiac sign to view daily horoscope:</h1></div>
+        <form action="{{ url_for('show_astrodetails')}}" method="post" id="detailsform">
+            <div class="grid-container">
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/capricorn.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Capricorn</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/aquarius.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Aquarius</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/pisces.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Pisces</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/aries.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Aries</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/taurus.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Taurus</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/gemini.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Gemini</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/cancer.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Cancer</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/lion.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Leo</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/virgo.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Virgo</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/libra.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Libra</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/scorpio.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Scorpio</p></div>
+                <div class="grid-item"><img src="{{ url_for('static',filename='images/sagittarius.png') }}" style="width:25%;"
+                                            class="w3-round"><p class="sun_shine">Sagittarius</p></div>
+            </div>
+            <input type="hidden" id="sunShineID" name="sunShineID">
+            <input type="hidden" id="dayId" name="dayId" value="today">
+            <input type="hidden" id="timeID" name="timeID" value="">
+        </form>
+    </div>
+    <!-- End Center content-->
+    <!-- Right Content-->
+    <div class="column side">
+    </div>
+    <!-- End Right content-->
+</div>
+<!-- End main content-->
+
+<script>
+    $(".grid-item").click(function(e) {
+        var sunShineValue = $(this).find('.sun_shine').text()
+        $("#sunShineID").val(sunShineValue);
+        $("#detailsform").submit();
+    });
+
+    $(window).load(function () {
+        $('body').addClass('large-background');
+    });
+</script>
+{% include "footer.html" %}

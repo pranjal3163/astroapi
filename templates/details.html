@@ -1,0 +1,37 @@
+{% include "header.html" %}
+<!-- Main Content-->
+<div class="row">
+    <!-- left Content-->
+    <div class="column side">
+    </div>
+    <!-- End left content-->
+    <!-- Middle Content-->
+    <div class="column middle">
+        <div><input type="hidden" id="signname" value={{result['sign']}}></div>
+        <div id="tabs">
+            <ul id="tabid">
+                <li><a id ="linkid" href="#tabsd">Yesterday</a></li>
+                <li><a id ="linkid" href="#tabsd">Today</a></li>
+                <li><a id ="linkid" href="#tabsd">Tomorrow</a></li>
+            </ul>
+            <div id="tabsd" load></div>
+            <div id="progress"></div>
+        </div>
+    </div>
+    <div class="column side">
+    </div>
+    <!-- End Right content-->
+</div>
+<!-- End main content-->
+
+<script>
+    $(window).load(function () {
+        $('body').addClass('large-background');
+        var result = "<table>{% for key, value in result.items() %}<tr><th>{{ key }}</th><td>{{value}}</td></tr>{% endfor %}</table>";
+        $("#tabsd").html(result);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% include "footer.html" %}
